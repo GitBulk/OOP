@@ -43,11 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallCenter\Call.cs" />
+    <Compile Include="CallCenter\Customer.cs" />
+    <Compile Include="CallCenter\Employee.cs" />
+    <Compile Include="CallCenter\Fresher.cs" />
+    <Compile Include="CallCenter\Program.cs" />
+    <Compile Include="CallCenter\ProjectManager.cs" />
+    <Compile Include="CallCenter\Rank.cs" />
+    <Compile Include="CallCenter\CallHandler.cs" />
+    <Compile Include="CallCenter\TechLead.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CallCenter\readme.txt" />
+    <Content Include="ParkingLot\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

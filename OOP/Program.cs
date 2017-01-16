@@ -19,15 +19,18 @@ namespace OOP
             //Console.WriteLine(juniorStudent.Grade);
             //Console.ReadLine();
 
-            List<string> names = new List<string>();
-            names.Add("Ali");
-            names.Add("Al");
-            names.Add("Aki");
-            names.Sort();
-            foreach (var item in names)
-            {
-                Console.WriteLine(item);
-            }
+            //List<string> names = new List<string>();
+            //names.Add("Ali");
+            //names.Add("Al");
+            //names.Add("Aki");
+            //names.Sort();
+            //foreach (var item in names)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            
+            CallCenter.Program.Excute();
         }
 
 
