@@ -10,6 +10,10 @@ namespace TaskPattern
     {
         static void Main(string[] args)
         {
+            //SevenWays.Frame.Run();
+            //ConcurrentThings.Frame.RunStack();
+            //ConcurrentThings.Frame.RunQueue();
+            ShareData.Frame.Run();
         }
     }
 }
