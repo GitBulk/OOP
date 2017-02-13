@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,8 +30,10 @@ namespace OOP
             //    Console.WriteLine(item);
             //}
 
-            
-            CallCenter.Program.Excute();
+
+            //CallCenter.Program.Excute();
+            double n = 82;
+            Console.WriteLine(n / 5);
         }
 
 

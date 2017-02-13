@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace OOP.CallCenter
 {
@@ -94,13 +92,6 @@ namespace OOP.CallCenter
             foreach (Rank rank in ranks)
             {
                 var empsOfLevel = GetFreeEmployeeOfLevel(rank);
-                //foreach (var emp in empsOfLevel)
-                //{
-                //    if (emp.Free)
-                //    {
-                //        return emp;
-                //    }
-                //}
                 if (empsOfLevel != null && empsOfLevel.Count() > 0)
                 {
                     return empsOfLevel.ElementAt(0);
