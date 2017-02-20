@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorPattern", "Mediator
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPattern", "TaskPattern\TaskPattern.csproj", "{F2BFACE5-8867-48E7-9C11-F6AE1F91861F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linqer", "Linqer\Linqer.csproj", "{4427294C-295D-4908-B7C3-DD97CDCAC5AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{F2BFACE5-8867-48E7-9C11-F6AE1F91861F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2BFACE5-8867-48E7-9C11-F6AE1F91861F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2BFACE5-8867-48E7-9C11-F6AE1F91861F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4427294C-295D-4908-B7C3-DD97CDCAC5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4427294C-295D-4908-B7C3-DD97CDCAC5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4427294C-295D-4908-B7C3-DD97CDCAC5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4427294C-295D-4908-B7C3-DD97CDCAC5AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
