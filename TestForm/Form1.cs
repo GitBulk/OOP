@@ -34,7 +34,7 @@ namespace TestForm
         }
 
 
-        
+
 
 
         public static async Task<string> GetJsonAsync(Uri uri)
@@ -54,6 +54,36 @@ namespace TestForm
             MessageBox.Show("result: " + jsonTask);
             //textBox1.Text = jsonTask.Result;
         }
+
+        private void btnInheritance_Click(object sender, EventArgs e)
+        {
+            Child instance = new Child();
+            instance.Increment();
+        }
+
+        private void btnLinq_Click(object sender, EventArgs e)
+        {
+            List<Person> people = new List<Person>()
+            {
+                new Person() { Age = 30, Hobbies = new List<string> () { "music", "food" }, Name = "toan" },
+                new Person() { Age = 40, Hobbies = new List<string> () { "music", "food" }, Name = "tran" },
+                new Person() { Age = 45, Hobbies = new List<string> () { "film" }, Name = "ngoc" },
+                new Person() { Age = 5, Hobbies = new List<string> () { "car" }, Name = "ronaldo" },
+                new Person() { Age = 32, Hobbies = new List<string> () { "tea" }, Name = "messi" }
+            };
+
+
+            var query = people.Where(p => p.Age > 20).SelectMany(x => x.Hobbies.Select(d => d)).Distinct().ToList();
+            //var query = people.Where(p => p.Age > 20).SelectMany(x => x.Hobbies.Select(d => d)).ToList();
+            int count = query.Count();
+        }
+    }
+
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public List<string> Hobbies { get; set; }
     }
 
     public class Post
@@ -62,5 +92,29 @@ namespace TestForm
         public int id { get; set; }
         public string title { get; set; }
         public string body { get; set; }
+    }
+
+
+    class Parent
+    {
+        protected int Count;
+        public Parent()
+        {
+            Count = 0;
+        }
+    }
+
+    class Child : Parent
+    {
+        private string name;
+        public Child()
+        {
+            name = "Child";
+        }
+
+        public void Increment()
+        {
+            Count = Count + 1;
+        }
     }
 }

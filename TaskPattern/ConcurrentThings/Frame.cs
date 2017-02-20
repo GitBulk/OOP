@@ -9,6 +9,7 @@ namespace TaskPattern.ConcurrentThings
     {
         public static void RunStack()
         {
+
             ConcurrentStack<int> concurrentStack = new ConcurrentStack<int>();
             for (int i = 0; i < 50000; i++)
             {
@@ -70,6 +71,15 @@ namespace TaskPattern.ConcurrentThings
         class Serie
         {
             public int CurrentValue { get; set; }
+        }
+    }
+
+    class Circle
+    {
+        private double radius;
+        public double Calculate(Func<double, double> op)
+        {
+            return op(radius);
         }
     }
 }
