@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Linqer.Group;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Linqer
     {
         static void Main(string[] args)
         {
+            Frame.Run();
         }
     }
 }
