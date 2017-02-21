@@ -10,6 +10,10 @@ namespace SingletonPattern
     {
         static void Main(string[] args)
         {
+            var singleOne = Singleton.Current();
+            var singleTwo = Singleton.Current();
+            
+            Console.WriteLine(singleOne == singleTwo);
         }
     }
 
@@ -37,5 +41,7 @@ namespace SingletonPattern
             }
             return Instance;
         }
+
+        public string Text { get; set; }
     }
 }
