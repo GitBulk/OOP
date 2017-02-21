@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -82,4 +83,5 @@ namespace TaskPattern.ConcurrentThings
             return op(radius);
         }
     }
+    
 }
