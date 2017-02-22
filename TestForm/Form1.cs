@@ -18,6 +18,20 @@ namespace TestForm
         {
             InitializeComponent();
             CenterToScreen();
+            List<Product> produts = new List<Product>();
+            produts.Add(new Product()
+            {
+                color = new Color() { red = 0, green = 1, blue = 2 },
+                name = "p1",
+                price = 1
+            });
+            produts.Add(new Product()
+            {   
+                color = new Color() { red = 0, green = 1, blue = 2 },
+                name = "p2",
+                price = 2
+            });
+            string json =  JsonConvert.SerializeObject(produts);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,10 +46,6 @@ namespace TestForm
                 MessageBox.Show("not null");
             }
         }
-
-
-
-
 
         public static async Task<string> GetJsonAsync(Uri uri)
         {
@@ -117,4 +127,20 @@ namespace TestForm
             Count = Count + 1;
         }
     }
+    
+
+    public class Product
+    {
+        public int price { get; set; }
+        public string name { get; set; }
+        public Color color { get; set; }
+    }
+
+    public class Color
+    {
+        public int red { get; set; }
+        public int green { get; set; }
+        public int blue { get; set; }
+    }
+
 }

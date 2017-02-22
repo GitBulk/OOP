@@ -57,6 +57,13 @@
     <Compile Include="Sample1\NormalDesktop.cs" />
     <Compile Include="Sample1\NormalLaptop.cs" />
     <Compile Include="Sample1\Program.cs" />
+    <Compile Include="Sample2\CompanyMonthlyModel.cs" />
+    <Compile Include="Sample2\CompanyMonthlyReport.cs" />
+    <Compile Include="Sample2\EmployeeModel.cs" />
+    <Compile Include="Sample2\EmployeeSummaryReport.cs" />
+    <Compile Include="Sample2\Frame.cs" />
+    <Compile Include="Sample2\Report.cs" />
+    <Compile Include="Sample2\ReportFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
