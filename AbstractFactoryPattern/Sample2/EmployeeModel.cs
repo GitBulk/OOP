@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactoryPattern.Sample2
 {
-    class Employee
+    class EmployeeModel
     {
         public string Name { get; set; }
         public int Age { get; set; }
