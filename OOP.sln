@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linqer", "Linqer\Linqer.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern", "SingletonPattern\SingletonPattern.csproj", "{705C5D47-9544-4B23-AD41-9A92F2D8BEFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA", "DSA\DSA.csproj", "{6B61BF90-99BD-4EF4-B6EC-48A7E11EB4B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{705C5D47-9544-4B23-AD41-9A92F2D8BEFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{705C5D47-9544-4B23-AD41-9A92F2D8BEFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{705C5D47-9544-4B23-AD41-9A92F2D8BEFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B61BF90-99BD-4EF4-B6EC-48A7E11EB4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B61BF90-99BD-4EF4-B6EC-48A7E11EB4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B61BF90-99BD-4EF4-B6EC-48A7E11EB4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B61BF90-99BD-4EF4-B6EC-48A7E11EB4B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

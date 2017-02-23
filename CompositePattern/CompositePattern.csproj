@@ -45,11 +45,10 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sample1\IPainter.cs" />
-    <Compile Include="Sample1\LandOwner.cs" />
-    <Compile Include="Sample1\Painter.cs" />
-    <Compile Include="Sample1\PaintingCompany.cs" />
+    <Compile Include="Sample1\Control.cs" />
+    <Compile Include="Sample1\Panel.cs" />
     <Compile Include="Sample1\Program.cs" />
+    <Compile Include="Sample1\Textbox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
