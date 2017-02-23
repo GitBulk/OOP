@@ -10,6 +10,7 @@ namespace InterpreterPattern
     {
         static void Main(string[] args)
         {
+            Sample1.Frame.Run();
         }
     }
 }

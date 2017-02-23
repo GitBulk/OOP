@@ -45,6 +45,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sample1\Frame.cs" />
+    <Compile Include="Sample1\IExpression.cs" />
+    <Compile Include="Sample1\MinusExpression.cs" />
+    <Compile Include="Sample1\MultiplyExpression.cs" />
+    <Compile Include="Sample1\NumberExpression.cs" />
+    <Compile Include="Sample1\PlusExpression.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
