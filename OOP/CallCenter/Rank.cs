@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CompositePattern.Sample1
+namespace OOP.CallCenter
 {
-    interface IPainter
+    enum Rank
     {
-        double EstimateDaysToPaint(int houses);
+        Fresher, TechLead, ProjectManager
     }
 }

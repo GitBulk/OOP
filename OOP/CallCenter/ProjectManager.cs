@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BuilderPattern.Sample1
+namespace OOP.CallCenter
 {
-    class Program
+    class ProjectManager : Employee
     {
-        public static void Excute()
+        public ProjectManager()
         {
-
+            this.Rank = Rank.ProjectManager;
         }
     }
 }

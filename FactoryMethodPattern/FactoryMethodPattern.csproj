@@ -53,6 +53,11 @@
     <Compile Include="Sample1\Subject.cs" />
     <Compile Include="Sample1\USAStudent.cs" />
     <Compile Include="Sample1\VietnamStudent.cs" />
+    <Compile Include="Sample2\FordExplorer.cs" />
+    <Compile Include="Sample2\FordFactory.cs" />
+    <Compile Include="Sample2\IVehicleFactory.cs" />
+    <Compile Include="Sample2\Program.cs" />
+    <Compile Include="Sample2\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
