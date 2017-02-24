@@ -16,12 +16,12 @@ namespace BuilderPattern.Sample1
 
         public void BuildPart2()
         {
-            product.Part1 = "Part 2";
+            product.Part2 = "Part 2";
         }
 
         public void BuildPart3()
         {
-            product.Part1 = "Part 3";
+            product.Part3 = "Part 3";
         }
 
         public Product GetProduct()
