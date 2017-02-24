@@ -9,17 +9,19 @@ namespace DSA
     class Program
     {
         static void Main(string[] args)
-        {   
-            string input = "(())";
-            Console.WriteLine(input + ": " + Check(input));
+        {
+            //string input = "(())";
+            //Console.WriteLine(input + ": " + Check(input));
 
-            input = "(([}))";
-            Console.WriteLine(input + ": " + Check(input));
+            //input = "(([}))";
+            //Console.WriteLine(input + ": " + Check(input));
 
-            input = "{(([]))}";
-            Console.WriteLine(input + ": " + Check(input));
-            input = "((a+1)*2)";
-            Console.WriteLine(input + ": " + Check(input));
+            //input = "{(([]))}";
+            //Console.WriteLine(input + ": " + Check(input));
+            //input = "((a+1)*2)";
+            //Console.WriteLine(input + ": " + Check(input));
+
+            Recursive.Frame.Run();
         }
 
         private static bool Check(string input)
@@ -62,7 +64,7 @@ namespace DSA
                 //    if (stack.Pop() != '[')
                 //        return false;
                 //}
-                else if(bracketPairs.ContainsKey(currentChar))
+                else if (bracketPairs.ContainsKey(currentChar))
                 {
                     if (stack.IsEmpty())
                     {
