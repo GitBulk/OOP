@@ -16,6 +16,7 @@ namespace FactoryMethodPattern.Sample1
         private List<Subject> subjects = new List<Subject>();
 
         public List<Subject> Subjects { get { return this.subjects; } }
+
         public Student()
         {
             this.CreateStudent();
@@ -30,6 +31,6 @@ namespace FactoryMethodPattern.Sample1
         }
 
         // Factory Method
-        public abstract void CreateStudent();
+        protected abstract void CreateStudent();
     }
 }

@@ -8,7 +8,7 @@ namespace FactoryMethodPattern.Sample1
 {
     public class USAStudent : Student
     {
-        public override void CreateStudent()
+        protected override void CreateStudent()
         {
             Subjects.Add(new Math());
             Subjects.Add(new Literature());

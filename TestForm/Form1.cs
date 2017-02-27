@@ -87,7 +87,43 @@ namespace TestForm
             //var query = people.Where(p => p.Age > 20).SelectMany(x => x.Hobbies.Select(d => d)).ToList();
             int count = query.Count();
         }
+
+        private void btnMulticastDelegate_Click(object sender, EventArgs e)
+        {
+            NumberChanger multicast;
+            var sum = new NumberChanger(AddNum);
+            var mul = new NumberChanger(MulNum);
+
+            
+            multicast = sum;
+            multicast += mul;
+
+
+            //sum(25);
+            //string s = "Sum Cast: " + number;
+
+            //mul(5);
+            //s += Environment.NewLine + "Mul Cast: " + number;
+
+            string s = "Multicast: " + multicast(5);
+            MessageBox.Show(s);
+        }
+
+        static int number = 10;
+        private static int AddNum(int input)
+        {
+            number += input;
+            return number;
+        }
+
+        private static int MulNum(int input)
+        {
+            number *= input;
+            return number;
+        }
     }
+
+    delegate int NumberChanger(int n);
 
     public class Person
     {

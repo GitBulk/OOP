@@ -32,6 +32,7 @@
             this.btnExcuteApi = new System.Windows.Forms.Button();
             this.btnInheritance = new System.Windows.Forms.Button();
             this.btnLinq = new System.Windows.Forms.Button();
+            this.btnMulticastDelegate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -74,11 +75,22 @@
             this.btnLinq.UseVisualStyleBackColor = true;
             this.btnLinq.Click += new System.EventHandler(this.btnLinq_Click);
             // 
+            // btnMulticastDelegate
+            // 
+            this.btnMulticastDelegate.Location = new System.Drawing.Point(39, 129);
+            this.btnMulticastDelegate.Name = "btnMulticastDelegate";
+            this.btnMulticastDelegate.Size = new System.Drawing.Size(117, 23);
+            this.btnMulticastDelegate.TabIndex = 4;
+            this.btnMulticastDelegate.Text = "Multicast Delegate";
+            this.btnMulticastDelegate.UseVisualStyleBackColor = true;
+            this.btnMulticastDelegate.Click += new System.EventHandler(this.btnMulticastDelegate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnMulticastDelegate);
             this.Controls.Add(this.btnLinq);
             this.Controls.Add(this.btnInheritance);
             this.Controls.Add(this.btnExcuteApi);
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button btnExcuteApi;
         private System.Windows.Forms.Button btnInheritance;
         private System.Windows.Forms.Button btnLinq;
+        private System.Windows.Forms.Button btnMulticastDelegate;
     }
 }
 
