@@ -43,11 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BalanceBracket\Frame.cs" />
     <Compile Include="MapExtensions.cs" />
     <Compile Include="MapResult.cs" />
     <Compile Include="OtherExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StackExtension.cs" />
+    <Compile Include="StackEx\Frame.cs" />
+    <Compile Include="StackEx\StackWithMin.cs" />
+    <Compile Include="StackEx\StackWithMin2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
