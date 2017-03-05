@@ -107,6 +107,7 @@ namespace TestForm
 
             string s = "Multicast: " + multicast(5);
             MessageBox.Show(s);
+
         }
 
         static int number = 10;
@@ -120,6 +121,24 @@ namespace TestForm
         {
             number *= input;
             return number;
+        }
+
+        private void btnNewMethod_Click(object sender, EventArgs e)
+        {
+            Child2 child = new Child2();
+            child.DoNew();
+
+            Father father = new Child2();
+            father.DoNew();
+        }
+
+        private void btnOverride_Click(object sender, EventArgs e)
+        {
+            Child2 child = new Child2();
+            child.DoOverride();
+
+            Father father = new Child2();
+            father.DoOverride();
         }
     }
 
@@ -162,6 +181,7 @@ namespace TestForm
         {
             Count = Count + 1;
         }
+        
     }
     
 
@@ -177,6 +197,33 @@ namespace TestForm
         public int red { get; set; }
         public int green { get; set; }
         public int blue { get; set; }
+    }
+
+    public class Father
+    {
+        public virtual void DoOverride()
+        {
+            Console.WriteLine("In father ovrride");
+        }
+
+        public void DoNew()
+        {
+            Console.WriteLine("In father new");
+        }
+    }
+
+    public class Child2: Father
+    {
+        public override void DoOverride()
+        {
+            Console.WriteLine("In child2 ovrride");
+        }
+
+        public new int DoNew()
+        {
+            Console.WriteLine("In Child new");
+            return 1;
+        }
     }
 
 }
