@@ -183,8 +183,7 @@ namespace TestForm
         }
         
     }
-    
-
+        
     public class Product
     {
         public int price { get; set; }
