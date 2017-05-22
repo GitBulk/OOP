@@ -87,7 +87,62 @@ namespace TestForm
             //var query = people.Where(p => p.Age > 20).SelectMany(x => x.Hobbies.Select(d => d)).ToList();
             int count = query.Count();
         }
+
+        private void btnMulticastDelegate_Click(object sender, EventArgs e)
+        {
+            NumberChanger multicast;
+            var sum = new NumberChanger(AddNum);
+            var mul = new NumberChanger(MulNum);
+
+            
+            multicast = sum;
+            multicast += mul;
+
+
+            //sum(25);
+            //string s = "Sum Cast: " + number;
+
+            //mul(5);
+            //s += Environment.NewLine + "Mul Cast: " + number;
+
+            string s = "Multicast: " + multicast(5);
+            MessageBox.Show(s);
+
+        }
+
+        static int number = 10;
+        private static int AddNum(int input)
+        {
+            number += input;
+            return number;
+        }
+
+        private static int MulNum(int input)
+        {
+            number *= input;
+            return number;
+        }
+
+        private void btnNewMethod_Click(object sender, EventArgs e)
+        {
+            Child2 child = new Child2();
+            child.DoNew();
+
+            Father father = new Child2();
+            father.DoNew();
+        }
+
+        private void btnOverride_Click(object sender, EventArgs e)
+        {
+            Child2 child = new Child2();
+            child.DoOverride();
+
+            Father father = new Child2();
+            father.DoOverride();
+        }
     }
+
+    delegate int NumberChanger(int n);
 
     public class Person
     {
@@ -126,9 +181,9 @@ namespace TestForm
         {
             Count = Count + 1;
         }
+        
     }
-    
-
+        
     public class Product
     {
         public int price { get; set; }
@@ -141,6 +196,33 @@ namespace TestForm
         public int red { get; set; }
         public int green { get; set; }
         public int blue { get; set; }
+    }
+
+    public class Father
+    {
+        public virtual void DoOverride()
+        {
+            Console.WriteLine("In father ovrride");
+        }
+
+        public void DoNew()
+        {
+            Console.WriteLine("In father new");
+        }
+    }
+
+    public class Child2: Father
+    {
+        public override void DoOverride()
+        {
+            Console.WriteLine("In child2 ovrride");
+        }
+
+        public new int DoNew()
+        {
+            Console.WriteLine("In Child new");
+            return 1;
+        }
     }
 
 }

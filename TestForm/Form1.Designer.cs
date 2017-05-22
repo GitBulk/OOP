@@ -32,6 +32,9 @@
             this.btnExcuteApi = new System.Windows.Forms.Button();
             this.btnInheritance = new System.Windows.Forms.Button();
             this.btnLinq = new System.Windows.Forms.Button();
+            this.btnMulticastDelegate = new System.Windows.Forms.Button();
+            this.btnNewMethod = new System.Windows.Forms.Button();
+            this.btnOverride = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -74,11 +77,44 @@
             this.btnLinq.UseVisualStyleBackColor = true;
             this.btnLinq.Click += new System.EventHandler(this.btnLinq_Click);
             // 
+            // btnMulticastDelegate
+            // 
+            this.btnMulticastDelegate.Location = new System.Drawing.Point(39, 129);
+            this.btnMulticastDelegate.Name = "btnMulticastDelegate";
+            this.btnMulticastDelegate.Size = new System.Drawing.Size(117, 23);
+            this.btnMulticastDelegate.TabIndex = 4;
+            this.btnMulticastDelegate.Text = "Multicast Delegate";
+            this.btnMulticastDelegate.UseVisualStyleBackColor = true;
+            this.btnMulticastDelegate.Click += new System.EventHandler(this.btnMulticastDelegate_Click);
+            // 
+            // btnNewMethod
+            // 
+            this.btnNewMethod.Location = new System.Drawing.Point(39, 197);
+            this.btnNewMethod.Name = "btnNewMethod";
+            this.btnNewMethod.Size = new System.Drawing.Size(75, 23);
+            this.btnNewMethod.TabIndex = 5;
+            this.btnNewMethod.Text = "new Method";
+            this.btnNewMethod.UseVisualStyleBackColor = true;
+            this.btnNewMethod.Click += new System.EventHandler(this.btnNewMethod_Click);
+            // 
+            // btnOverride
+            // 
+            this.btnOverride.Location = new System.Drawing.Point(172, 197);
+            this.btnOverride.Name = "btnOverride";
+            this.btnOverride.Size = new System.Drawing.Size(75, 23);
+            this.btnOverride.TabIndex = 6;
+            this.btnOverride.Text = "Override";
+            this.btnOverride.UseVisualStyleBackColor = true;
+            this.btnOverride.Click += new System.EventHandler(this.btnOverride_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnOverride);
+            this.Controls.Add(this.btnNewMethod);
+            this.Controls.Add(this.btnMulticastDelegate);
             this.Controls.Add(this.btnLinq);
             this.Controls.Add(this.btnInheritance);
             this.Controls.Add(this.btnExcuteApi);
@@ -95,6 +131,9 @@
         private System.Windows.Forms.Button btnExcuteApi;
         private System.Windows.Forms.Button btnInheritance;
         private System.Windows.Forms.Button btnLinq;
+        private System.Windows.Forms.Button btnMulticastDelegate;
+        private System.Windows.Forms.Button btnNewMethod;
+        private System.Windows.Forms.Button btnOverride;
     }
 }
 

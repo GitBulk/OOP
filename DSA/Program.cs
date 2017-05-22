@@ -1,91 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA
+﻿namespace DSA
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //string input = "(())";
-            //Console.WriteLine(input + ": " + Check(input));
-
-            //input = "(([}))";
-            //Console.WriteLine(input + ": " + Check(input));
-
-            //input = "{(([]))}";
-            //Console.WriteLine(input + ": " + Check(input));
-            //input = "((a+1)*2)";
-            //Console.WriteLine(input + ": " + Check(input));
-
-            Recursive.Frame.Run();
+            //BalanceBracket.Frame.Run();
+            //StackEx.Frame.Run();
+            
+            int []arr = { -7, 1, 5, 2, -4, 3, 0 };
+            int arr_size = arr.Length;
+            System.Console.WriteLine("First equilibrium index is " +
+                               Eequilibrium(arr, arr_size));
         }
 
-        private static bool Check(string input)
+        static int Eequilibrium(int[] arr, int n)
         {
-            //var stack = new Stack<char>();
-            var bracketPairs = new Dictionary<char, char>();
-            bracketPairs.Add('}', '{');
-            bracketPairs.Add(']', '[');
-            bracketPairs.Add(')', '(');
+            int sum = 0;      // initialize sum of whole array
+            int leftsum = 0; // initialize leftsum
 
-            //char currentChar = 'a';
-            char currentChar = '\n';
-            var stack = new Stack<char>();
-            string open = "{([";
-            for (int i = 0; i < input.Length; i++)
+            /* Find sum of the whole array */
+            for (int i = 0; i < n; ++i)
+                sum += arr[i];
+
+            for (int i = 0; i < n; ++i)
             {
-                currentChar = input[i];
-                if (open.IndexOf(currentChar) > -1)
-                {
-                    stack.Push(currentChar);
-                }
-                //else if(currentChar == ')')
-                //{
-                //    if (stack.IsEmpty())
-                //        return false;
-                //    if (stack.Pop() != '(')
-                //        return false;
-                //}
-                //else if (currentChar == '}')
-                //{
-                //    if (stack.IsEmpty())
-                //        return false;
-                //    if (stack.Pop() != '{')
-                //        return false;
-                //}
-                //else if (currentChar == ']')
-                //{
-                //    if (stack.IsEmpty())
-                //        return false;
-                //    if (stack.Pop() != '[')
-                //        return false;
-                //}
-                else if (bracketPairs.ContainsKey(currentChar))
-                {
-                    if (stack.IsEmpty())
-                    {
-                        return false;
-                    }
-                    if (stack.Pop() != bracketPairs[currentChar])
-                    {
-                        return false;
-                    }
-                }
+                sum -= arr[i]; // sum is now right sum for index i
+
+                if (leftsum == sum)
+                    return i;
+
+                leftsum += arr[i];
             }
 
-            return stack.IsEmpty();
+            /* If no equilibrium index found, then return 0 */
+            return -1;
         }
     }
 
-    public static class StackExtension
-    {
-        public static bool IsEmpty<T>(this Stack<T> stack)
-        {
-            return stack.Count == 0;
-        }
-    }
 }
