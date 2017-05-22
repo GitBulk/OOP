@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Others
 {
     public static class FuncInCSharp
     {
         const string Name = "toan";
-        delegate string ConvertMethod(string inString);
+
+        delegate string SampleDelegate(string input);
 
         private static string UppercaseString(string input)
         {
@@ -18,9 +15,8 @@ namespace Others
 
         public static void ExecuteDelegate()
         {
-            ConvertMethod convertMethod = UppercaseString;
-
-            Console.WriteLine(convertMethod(Name));
+            SampleDelegate instance = UppercaseString;
+            Console.WriteLine(instance("oojnl"));
         }
 
         public static void ExecuteFunc()

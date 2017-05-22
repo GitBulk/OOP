@@ -8,6 +8,21 @@ namespace DSA.Recursive
 {
     class Frame
     {
+        void Main()
+        {
+            DateTime time = GetTime();
+            if (time == null)
+            {
+                // do something
+            }
+        }
+
+        private DateTime GetTime()
+        {
+            // omitted
+            return new DateTime();
+        }
+
         // https://www.codeproject.com/Articles/142292/Recursive-methods-in-Csharp
         // http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibtable.html
         // http://introcs.cs.princeton.edu/java/23recursion/
